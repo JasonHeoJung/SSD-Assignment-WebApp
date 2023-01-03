@@ -37,6 +37,15 @@ namespace SSD_Assignment_WebApp.Controllers
             return RedirectToAction("Index", "Game");
         }
 
+        public ActionResult Instructions()
+        {
+            return RedirectToAction("Index", "Instructions");
+        }
+        public ActionResult BuildingRules()
+        {
+            return RedirectToAction("BuildingRules", "Instructions");
+        }
+
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()
         {
