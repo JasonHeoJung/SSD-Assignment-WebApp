@@ -1,0 +1,72 @@
+﻿body, html {
+    height: 100%;
+}
+
+h2{
+    text-align:center;
+}
+.bg {
+    background-image: url('../images/cityImage.jpg');
+    height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+dcentre {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 0;
+    margin-bottom: 0;
+    align-content: center;
+    text-align: center;
+}
+
+.btn-group button {
+    background-color: black;
+    border-radius: 5px; 
+    color: antiquewhite; /* White text */
+    padding: 10px 24px; /* Some padding */
+    cursor: pointer; /* Pointer/hand icon */
+    display: block; /* Make the buttons appear below each other */
+    flex-direction: row;
+    margin-top:10px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+    .btn-group button:not(:last-child) {
+        border-top: none;
+        border-left: none;
+        border-right: none;
+        border-bottom: none; /* Prevent double borders */
+    }
+
+    .btn-group button:last-child {
+        border-top: none;
+        border-left:none;
+        border-right: none;
+        border-bottom: none; /* Prevent double borders */
+    }
+
+    .btn-group button:hover {
+        background-color: dodgerblue;
+        color: black;
+    }
+
+.blurDiv {
+    background-color: #000;
+    color: #fff;
+    border-radius: 5px;
+    opacity: .75;
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+}
+
+.center {
+    margin: auto;
+    width: 50%;
+    border: 3px black;
+}
