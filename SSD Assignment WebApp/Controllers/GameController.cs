@@ -22,18 +22,18 @@ namespace SSD_Assignment_WebApp.Controllers
             {
                 for (int i = 0; i < 20; i++)
                 {
-                    List<GridSpace> row;
-                    for (int j = 0; i < 20; i++)
+                    List<GridSpace> row = new List<GridSpace>();
+                    for (int j = 0; j < 20; j++)
                     {
-                        
+                        GridSpace g = new GridSpace { ycoord = i, xcoord = j, Building = 'N', Empty = true };
+                        row.Add(g);
                     }
-                    
+                    game.Map.Add(row);
                 }
                 game.TurnNo = 0;
                 game.CoinBal = 16;
                 game.Score = 0;
             }
-
             return View(game);
         }
 

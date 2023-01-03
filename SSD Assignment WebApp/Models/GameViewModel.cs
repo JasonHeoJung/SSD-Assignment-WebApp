@@ -32,7 +32,9 @@ namespace SSD_Assignment_WebApp.Models
         [Display(Name = "Map")]
         public List<List<GridSpace>> Map { get; set; }
 
-        public string position { get; set; }
+        public int ycoord { get; set; }
+
+        public int xcoord { get; set; }
 
         public bool Empty { get; set; }
 

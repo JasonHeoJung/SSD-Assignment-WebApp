@@ -30,7 +30,7 @@ namespace SSD_Assignment_WebApp.Models
 
         [Required]
         [Display(Name = "Map")]
-        public List<List<GridSpace>> Map { get; set; }
+        public List<List<GridSpace>> Map = new List<List<GridSpace>>();
 
 
     }

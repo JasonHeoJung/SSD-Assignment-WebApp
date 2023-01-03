@@ -7,7 +7,9 @@ namespace SSD_Assignment_WebApp.Models
 {
     public class GridSpace
     {
-        public string position { get; set; }
+        public int ycoord { get; set; }
+
+        public int xcoord { get; set; }
         
         public bool Empty { get; set; }
 

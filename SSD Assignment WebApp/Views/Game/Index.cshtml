@@ -1,23 +1,40 @@
-﻿@model IEnumerable<SSD_Assignment_WebApp.Models.GameViewModel>
+﻿@model SSD_Assignment_WebApp.Models.Game
 
-<p>
-    <a asp-action="Create">Create New</a>
-</p>
-<table class="table">
-    <thead>
-        <tr>
-            <th></th>
-        </tr>
-    </thead>
-    <tbody>
-@foreach (var item in Model) {
-        <tr>
-            <td>
-                @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
-                @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
-                @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
-            </td>
-        </tr>
+@foreach (List<GridSpace> row in Model.Map)
+{
+    @foreach (GridSpace g in row)
+    {
+        @if (g.Building == 'R')
+        {
+            <img src="~/img/residential.jpg" width="50" />
+        }
+
+        @if (g.Building == 'I')
+        {
+            <img src="~/img/Industry.jpg" width="50" />
+        }
+
+        @if (g.Building == 'C')
+        {
+            <img src="~/img/commercial.jpg" width="50" />
+        }
+
+        @if (g.Building == 'O')
+        {
+            <img src="~/img/park.jpg" width="50" />
+        }
+
+        @if (g.Building == '*')
+        {
+            <img src="~/img/road.jpg" width="50" />
+        }
+
+        @if (g.Building == 'N')
+        {
+            <img src="~/img/empty.jpg" width="50"/>
+        }
+
+    }
+    <br />
+
 }
-    </tbody>
-</table>
