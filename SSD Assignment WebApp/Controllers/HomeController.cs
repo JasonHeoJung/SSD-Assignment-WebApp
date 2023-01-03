@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using SSD_Assignment_WebApp.Models;
 using System;
@@ -6,6 +7,8 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
 using System.Threading.Tasks;
+using System.IO;
+
 
 namespace SSD_Assignment_WebApp.Controllers
 {
@@ -26,6 +29,12 @@ namespace SSD_Assignment_WebApp.Controllers
         public IActionResult Privacy()
         {
             return View();
+        }
+
+        public ActionResult NewGame() 
+        {
+            HttpContext.Session.SetString("GameType", "NewGame");
+            return RedirectToAction("Index", "Game");
         }
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
