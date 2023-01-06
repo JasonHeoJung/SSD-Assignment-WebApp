@@ -41,9 +41,15 @@ namespace SSD_Assignment_WebApp.Controllers
         {
             return RedirectToAction("Index", "Instructions");
         }
+
         public ActionResult BuildingRules()
         {
             return RedirectToAction("BuildingRules", "Instructions");
+        }
+
+        public IActionResult Exit()
+        {
+            return RedirectToAction("Exit", "Home");
         }
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
